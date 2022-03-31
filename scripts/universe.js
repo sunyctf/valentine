@@ -83,7 +83,8 @@ function Star() {
     }
   };
 
-  this.draw = function() {
+  // 开始绘制
+  this.draw = function() { //绘制文字功能模块
     universe.beginPath();
 
     if (this.giant) {
@@ -93,7 +94,7 @@ function Star() {
       universe.fillStyle = 'rgba(' + cometColor + ',' + this.opacity + ')';
       universe.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
 
-      //comet tail
+      //comet tail for循环
       for (var i = 0; i < 30; i++) {
         universe.fillStyle = 'rgba(' + cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
         universe.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
@@ -104,8 +105,8 @@ function Star() {
       universe.rect(this.x, this.y, this.r, this.r);
     }
 
-    universe.closePath();
-    universe.fill();
+    universe.closePath(); //关闭路径
+    universe.fill(); //填充
   };
 
   this.move = function() {

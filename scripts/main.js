@@ -1,17 +1,18 @@
 ;(function (window) {
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
-
+  // 初始化
   const FRAME_RATE = 60
-  const PARTICLE_NUM = 2000
-  const RADIUS = Math.PI * 2
-  const CANVASWIDTH = 500
-  const CANVASHEIGHT = 150
-  const CANVASID = 'canvas'
-
+  const PARTICLE_NUM = 2000 //粒子的数量
+  const RADIUS = Math.PI * 2 //半径范围
+  const CANVASWIDTH = 500 //宽度
+  const CANVASHEIGHT = 150 //高度
+  const CANVASID = 'canvas' //调用幕布初始化
+  
+  //文本框，写下自己想要的祝福语
   let texts = ['MY DEAR', 'LOOK UP AT THE', 'STARRY SKY', 'ARE YOU', 'LOOKING AT THE', 'SAME STAR', 'WITH ME ?', 'HAPPY', 'CHINESE', 'VALENTINE\'S', 'DAY', 'I MISS YOU']
 
-  let canvas,
+  let canvas, //幕布初始化具体参数
     ctx,
     particles = [],
     quiver = true,
@@ -153,6 +154,7 @@
     draw()
   }
 
+  // 调用文字
   class Particle {
     constructor (canvas) {
       let spread = canvas.height
@@ -181,7 +183,9 @@
       this.fadingOut = true
       this.fadingIn = true
     }
-    fadeIn () {
+
+    // 星星运动
+    fadeIn () { //汇聚
       this.fadingIn = this.opacity > this.opacityTresh ? false : true
       if (this.fadingIn) {
         this.opacity += this.fadeInRate
@@ -189,7 +193,7 @@
         this.opacity = 1
       }
     }
-    fadeOut () {
+    fadeOut () { //逃离
       this.fadingOut = this.opacity < 0 ? false : true
       if (this.fadingOut) {
         this.opacity -= this.fadeOutRate

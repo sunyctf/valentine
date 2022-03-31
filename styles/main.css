@@ -10,7 +10,7 @@ body {
     overflow-y: hidden;
 }
 
-body {
+body { /*主题样式*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -25,8 +25,8 @@ body {
     align-items: center;
     -webkit-filter: contrast(120%);
     filter: contrast(120%);
-    background-color: black;
-    position: relative;
+    background-color: black; /*背景颜色黑色*/
+    position: relative; /*位置*/
 }
 
 .container {
@@ -36,7 +36,7 @@ body {
 
 }
 
-.content {
+.content { /*100%显示*/
     width: 100% auto;
     height: 100% auto;
 }
@@ -65,7 +65,7 @@ body {
     width: 100%;
 }
 
-#scene {
+#scene { /*场景*/
     height: 100%;
     position: absolute;
     left: 50%;
@@ -84,9 +84,9 @@ a:hover {
     opacity: 1;
 }
 
-.txt {
-    color: hsla(0, 0%, 0%, 0);
-    text-shadow: #fff 0 0 10px;
+.txt { /*文本样式*/
+    color: hsla(0, 0%, 0%, 0); /*颜色*/
+    text-shadow: #fff 0 0 10px; /*文本展示*/
     transition: text-shadow 2s cubic-bezier(0, 1, 0, 1);
 }
 
@@ -96,6 +96,6 @@ a:hover {
     }
 }
 
-#canvas{
+#canvas{ /*幕布*/
     margin: 0 auto;
 }
