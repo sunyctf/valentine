@@ -9,9 +9,13 @@
   const CANVASHEIGHT = 150 //高度
   const CANVASID = 'canvas' //调用幕布初始化
   
-  //文本框，写下自己想要的祝福语
-  let texts = ['MY DEAR', 'LOOK UP AT THE', 'STARRY SKY', 'ARE YOU', 'LOOKING AT THE', 'SAME STAR', 'WITH ME ?', 'HAPPY', 'CHINESE', 'VALENTINE\'S', 'DAY', 'I MISS YOU']
-
+  //文本框，写下自己想要的祝福语 ---en
+  // let texts = ['MY DEAR', 'LOOK UP AT THE', 'STARRY SKY', 'ARE YOU', 'LOOKING AT THE', 'SAME STAR', 'WITH ME ?', 'HAPPY', 'CHINESE', 'VALENTINE\'S', 'DAY', 'I MISS YOU']
+  
+  //文本框，写下自己想要的祝福语 ---cn
+  let texts = ['我的宝❤', '抬头看看', '星空', '对着', '流星', '许下', '永不分离的','心愿', 
+  '而你', '就是', '我生命中', '最亮的','星星', 'I LOVE YOU']
+  
   let canvas, //幕布初始化具体参数
     ctx,
     particles = [],
